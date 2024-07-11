@@ -18,6 +18,9 @@
 		559073912C4044670033B87D /* EventStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559073902C4044670033B87D /* EventStorageService.swift */; };
 		5590739A2C4068100033B87D /* EventCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559073992C4068100033B87D /* EventCardView.swift */; };
 		5590739C2C4068210033B87D /* ToggleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5590739B2C4068210033B87D /* ToggleView.swift */; };
+		C5BF5EAE2C406DA600D4C282 /* TabData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF5EAD2C406DA600D4C282 /* TabData.swift */; };
+		C5BF5EB02C406E1500D4C282 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF5EAF2C406E1500D4C282 /* CustomTabBar.swift */; };
+		C5BF5EB22C4077F300D4C282 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF5EB12C4077F300D4C282 /* EventListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		559073902C4044670033B87D /* EventStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventStorageService.swift; sourceTree = "<group>"; };
 		559073992C4068100033B87D /* EventCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCardView.swift; sourceTree = "<group>"; };
 		5590739B2C4068210033B87D /* ToggleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleView.swift; sourceTree = "<group>"; };
+		C5BF5EAD2C406DA600D4C282 /* TabData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabData.swift; sourceTree = "<group>"; };
+		C5BF5EAF2C406E1500D4C282 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
+		C5BF5EB12C4077F300D4C282 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				5590738E2C4044090033B87D /* Event.swift */,
+				C5BF5EAD2C406DA600D4C282 /* TabData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -102,6 +109,8 @@
 				559073992C4068100033B87D /* EventCardView.swift */,
 				5590739B2C4068210033B87D /* ToggleView.swift */,
 				5590738C2C4043E60033B87D /* EventDetailsView.swift */,
+				C5BF5EAF2C406E1500D4C282 /* CustomTabBar.swift */,
+				C5BF5EB12C4077F300D4C282 /* EventListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,9 +210,12 @@
 				559073892C4043CB0033B87D /* HomeView.swift in Sources */,
 				559073762C4043500033B87D /* ContentView.swift in Sources */,
 				559073912C4044670033B87D /* EventStorageService.swift in Sources */,
+				C5BF5EB02C406E1500D4C282 /* CustomTabBar.swift in Sources */,
 				5590738B2C4043D50033B87D /* CalendarView.swift in Sources */,
 				5590738D2C4043E60033B87D /* EventDetailsView.swift in Sources */,
 				5590739A2C4068100033B87D /* EventCardView.swift in Sources */,
+				C5BF5EB22C4077F300D4C282 /* EventListView.swift in Sources */,
+				C5BF5EAE2C406DA600D4C282 /* TabData.swift in Sources */,
 				5590738F2C4044090033B87D /* Event.swift in Sources */,
 				5590739C2C4068210033B87D /* ToggleView.swift in Sources */,
 				559073742C4043500033B87D /* DCICalendarApp.swift in Sources */,

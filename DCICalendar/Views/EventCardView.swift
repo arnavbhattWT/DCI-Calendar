@@ -38,7 +38,7 @@ struct EventCardView: View {
                 }
             }
             .padding()
-            .background(event.type == .DCI ? Color.blue : Color.purple)
+            .background(event.type == .DCI ? Color.customBlue : Color.customPurple)
             .cornerRadius(10)
             .padding(.vertical, 5)
             

@@ -13,7 +13,7 @@ struct Event: Identifiable {
     let endDate: Date
     let address: String
     let flyerLink: String
-    let attendance: Bool
+    var attendance: Bool
     let title: String
     let description: String
     let type: EventType

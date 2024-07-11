@@ -23,7 +23,7 @@ struct ToggleView: View {
             HStack{
                 ZStack{
                     Capsule()
-                        .fill(isDCI ? Color.blue : Color.purple)
+                        .fill(isDCI ? Color.customBlue : Color.customPurple)
                         .frame(width: 105, height: 25)
                         .offset(x: isDCI ? 107 : 0)
                         .animation(.easeOut(duration: 0.2))
