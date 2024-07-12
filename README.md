@@ -14,11 +14,11 @@ For a visual walkthrough of the application, please visit our presentation here:
 
 # Getting Started
 Prerequisites
-Xcode
-Swift 5
-iOS 14.0 or later
+- Xcode
+- Swift 5
+- iOS 14.0 or later
 
 # Installation
-Clone this repository
-Open the project in Xcode
-Run the app in the simulator or on your device
+- Clone this repository
+- Open the project in Xcode
+- Run the app in the simulator or on your device
