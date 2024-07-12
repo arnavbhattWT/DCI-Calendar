@@ -6,7 +6,8 @@
 //
 import SwiftUI
 struct HomeView: View {
-  @ObservedObject var eventStorage = EventStorageService()
+//    @State var currentTab: Tab = .home
+    @ObservedObject var eventStorage: EventStorageService
   @State private var isDCISelected: Bool = true
   @State private var selectedEvent: Event? = nil
   @State private var showingEventDetails = false
@@ -112,6 +113,8 @@ struct HomeView: View {
       }
       Spacer()
     }
+//      CustomTabBar(currentTab: $currentTab)
+
   }
   func formattedDividerDate(_ date: Date) -> String {
     // "Jun 20"
@@ -145,5 +148,5 @@ struct CustomProgressRing: View {
   }
 }
 #Preview {
-  HomeView()
+  HomeView(eventStorage: EventStorageService())
 }

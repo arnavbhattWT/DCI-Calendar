@@ -10,7 +10,8 @@ import SwiftUI
 struct EventListView: View {
     @ObservedObject var eventStorage: EventStorageService
     var filteredEvents: [Event]
-    
+    var date: Date?
+
     var body: some View {
         
         ScrollView {
@@ -22,22 +23,19 @@ struct EventListView: View {
                         
                         let dateString = formattedDividerDate(event.startDate)
                         
-                        HStack {
-                            Text(dateString)
-                                .font(.system(size: 15))
-                                .foregroundColor(Color.gray.opacity(0.5))
-                            Rectangle()
-                                .fill(Color.gray.opacity(0.5))
-                                .frame(height: 1)
-                                .edgesIgnoringSafeArea(.horizontal)
-                        }
-                        .padding(.vertical, 8)
-                        .padding(.leading, 20)
-                        .padding(.trailing, 10)
+                        DividerWithDate(dateString: dateString)
                     }
                     
                     EventCardView(event: event)
                         .padding(.leading)
+                }
+
+                if filteredEvents.isEmpty {
+                    if let date {
+                        let dateString = formattedDividerDate(date)
+                        DividerWithDate(dateString: dateString)
+                    }
+                    NoEventsView()
                 }
             }
         }
@@ -48,6 +46,25 @@ struct EventListView: View {
         formatter.dateFormat = "MMM d"
         let formattedString = formatter.string(from: date)
         return formattedString
+    }
+}
+
+struct DividerWithDate: View {
+    var dateString: String
+
+    var body: some View {
+        HStack {
+            Text(dateString)
+                .font(.system(size: 15))
+                .foregroundColor(Color.gray.opacity(0.5))
+            Rectangle()
+                .fill(Color.gray.opacity(0.5))
+                .frame(height: 1)
+                .edgesIgnoringSafeArea(.horizontal)
+        }
+        .padding(.vertical, 8)
+        .padding(.leading, 20)
+        .padding(.trailing, 10)
     }
 }
 

@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct CustomTabBar: View {
-    @Binding var currentTab: Tab
+    @State var currentTab: Tab = .home
+    @ObservedObject var eventStorage = EventStorageService()
+    @State var isActive = false
+
     var backgroundColors = [Color("white")]
     
     var body: some View {
         VStack {
-            
+            switch currentTab {
+            case .home:
+                HomeView(eventStorage: eventStorage)
+            case .calendar:
+                CalendarView(eventStorage: eventStorage)
+            case .profile:
+                HomeView(eventStorage: eventStorage)
+            }
             Rectangle()
                     .fill(Color.gray)
                     .frame(height: 1)
@@ -26,8 +36,8 @@ struct CustomTabBar: View {
                             .renderingMode(.template)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.black)
-                        
+                            .foregroundStyle(currentTab.rawValue == tab.rawValue ? .customPurple : .black)
+
                     }
                 }
                 .frame(maxWidth: .infinity)
@@ -41,6 +51,6 @@ struct CustomTabBar: View {
 }
 
 #Preview {
-    //CustomTabBar(currentTab: .constant(.home))
-    HomeView()
+    CustomTabBar()
+//    HomeView()
 }

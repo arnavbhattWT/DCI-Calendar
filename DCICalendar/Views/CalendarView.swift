@@ -2,14 +2,14 @@
 //  CalendarView.swift
 //  DCICalendar
 //
-//  Created by Sam Gilmore on 7/11/24.
+//  Created by Brynne Delaney on 7/11/24.
 //
 
 
 import SwiftUI
 
 struct CalendarView: View {
-    @State var currentTab: Tab = .calendar
+//    @State var currentTab: Tab = .calendar
     @ObservedObject var eventStorage: EventStorageService
     
     var days = ["Mon", "Tues", "Wed", "Thur", "Fri", "Sat", "Sun"]
@@ -17,13 +17,11 @@ struct CalendarView: View {
     @State var selectedDate = Date()
     
     func selected(date: Date) -> Bool {
-        return date.currentComponents().day == selectedDate.currentComponents().day &&
-        date.currentComponents().month == selectedDate.currentComponents().month
+        return selectedDate.dateIsEqual(to: date)
     }
     
     func isCurrent(date: Date) -> Bool {
-        return date.currentComponents().day == Date().currentComponents().day &&
-        date.currentComponents().month == Date().currentComponents().month
+        return Date().dateIsEqual(to: date)
     }
     
     var body: some View {
@@ -76,35 +74,53 @@ struct CalendarView: View {
                 }
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 20) {
                     ForEach(fetchDates()) { value in
+                        let days = getDaysWithEvents()
                         VStack {
                             if value.day != -1 {
-                                Button {                    selectedDate = value.date
+                                Button {
+                                    selectedDate = value.date
                                 } label: {
-                                    Text("\(value.day)")
-                                    //                  .fontWeight(value.day == Date().currentComponents().day ? .bold : .regular)
-                                        .background {
-                                            ZStack (alignment: .bottom) {
-                                                if isCurrent(date: value.date) {
-                                                    Circle()
-                                                        .frame(width: 35, height: 35)
-                                                        .foregroundStyle(.customBlue)
-                                                        .opacity(0.3)
+                                    VStack {
+                                        Text("\(value.day)")
+                                        //                  .fontWeight(value.day == Date().currentComponents().day ? .bold : .regular)
+                                            .background {
+                                                ZStack (alignment: .bottom) {
+                                                    if isCurrent(date: value.date) {
+                                                        Circle()
+                                                            .frame(width: 35, height: 35)
+                                                            .foregroundStyle(.customBlue)
+                                                            .opacity(0.3)
+                                                    }
+                                                    if selected(date: value.date) {
+                                                        Circle()
+                                                            .frame(width: 35, height: 35)
+                                                            .foregroundStyle(.customPurple)
+                                                            .opacity(0.3)
+                                                    }
                                                 }
-                                                if selected(date: value.date) {
+                                            }
+                                        HStack(spacing: 4) {
+                                            ForEach(eventStorage.events) { event in
+                                                let isDCI = event.type == .DCI
+                                                if !eventStorage.events.contains(where: { $0.startDate.dateIsEqual(to: value.date) }) {
                                                     Circle()
-                                                        .frame(width: 35, height: 35)
-                                                        .foregroundStyle(.red)
-                                                        .opacity(0.3)
+                                                        .frame(width: 5, height: 5)
+                                                        .foregroundStyle(.clear)
+
+                                                }
+                                                if value.date.dateIsEqual(to: event.startDate) {
+                                                    Circle()
+                                                        .frame(width: 5, height: 5)
+                                                        .foregroundStyle(isDCI ? .customBlue : .customPurple)
                                                 }
                                             }
                                         }
+
+                                    }
                                 }
                             } else {
                                 Text("")
                             }
-                            Circle()
-                                .frame(width: 5, height: 5)
-                                .foregroundStyle(.customBlue)
                         }
                         .buttonStyle(.plain)
                         .frame(width: 32, height: 32)
@@ -116,10 +132,29 @@ struct CalendarView: View {
                 selectedDate = fetchMonth()
             }
             
-            EventListView(eventStorage: eventStorage, filteredEvents: eventStorage.events)
+            EventListView(eventStorage: eventStorage, filteredEvents: getSelectedDateEvents(date: selectedDate), date: selectedDate)
+            Spacer()
         }
-        CustomTabBar(currentTab: $currentTab)
+//        CustomTabBar(currentTab: $currentTab)
     }
+
+    func getDaysWithEvents() -> [Date] {
+        var days: [Date] = []
+        for event in eventStorage.events {
+            days.append(event.startDate)
+        }
+        return days
+    }
+    func getSelectedDateEvents(date: Date) -> [Event] {
+        var filtered: [Event] = []
+        for event in eventStorage.events {
+            if (event.startDate.dateIsEqual(to: selectedDate)) {
+            filtered.append(event)
+          }
+        }
+        return filtered
+    }
+
     func fetchDates() -> [CalendarDate] {
         let calendar = Calendar.current
         let currentMonth = fetchMonth()
@@ -132,49 +167,14 @@ struct CalendarView: View {
         }
         return dates
     }
+
     func fetchMonth() -> Date {
         let calendar = Calendar.current
         let month = calendar.date(byAdding: .month, value: selectedMonth, to: Date())
         return month!
     }
 }
-struct CalendarDate: Identifiable {
-    let id = UUID()
-    var day: Int
-    var date: Date
-}
-extension Date {
-    func currentComponents() -> DateComponents {
-        let calendar = Calendar.current
-        return calendar.dateComponents(in: .current, from: self)
-    }
-    func stringFormat() -> String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "MMMM YYYY"
-        return formatter.string(from: self)
-    }
-    func datesOfMonth() -> [Date] {
-        let calendar = Calendar.current
-        let currentMonth = calendar.component(.month, from: self)
-        let currentYear = calendar.component(.year, from: self)
-        var startDateComponents = DateComponents()
-        startDateComponents.month = currentMonth
-        startDateComponents.year = currentYear
-        startDateComponents.day = 1
-        let startDate = calendar.date(from: startDateComponents)!
-        var endDateComponents = DateComponents()
-        endDateComponents.month = 1
-        endDateComponents.day = -1
-        let endDate = calendar.date(byAdding: endDateComponents, to: startDate)!
-        var dates: [Date] = []
-        var currentDate = startDate
-        while currentDate <= endDate {
-            dates.append(currentDate)
-            currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
-        }
-        return dates
-    }
-}
+
 #Preview {
     CalendarView(eventStorage: EventStorageService())
 }
