@@ -146,4 +146,20 @@ enum LocalizedContent {
             )
         }
     }
+
+    enum Profile {
+        /// Coach
+        static let coach = String(
+            localized: "profile.text.coach",
+            defaultValue: "Coach",
+            comment: "Coach text"
+        )
+
+        /// Have Questions? Contact Us.
+        static let haveQs = String(
+            localized: "profile.text.have-questions",
+            defaultValue: "Have Questions? Contact Us",
+            comment: "Have Questions? Contact Us"
+        )
+    }
 }
