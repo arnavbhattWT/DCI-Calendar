@@ -35,49 +35,51 @@ struct ProfileView: View {
                     Text("Geoff Grammer")
                     Spacer()
                     Image(systemName: "pencil.circle.fill")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                 }
                 .padding(.horizontal)
                 
-                Divider().background(Color.black)
-                
+                Divider().background(.primary)
+
                 HStack {
                     Text("ggrammer")
                     Spacer()
                     Image(systemName: "pencil.circle.fill")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                 }
                 .padding(.horizontal)
                 
-                Divider().background(Color.black)
-                
+                Divider().background(.primary)
+
                 HStack {
                     Text("••••••••")
                     Spacer()
                     Image(systemName: "pencil.circle.fill")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                 }
                 .padding(.horizontal)
                 
-                Divider().background(Color.black)
-                
+                Divider().background(.primary)
+
                 HStack {
                     Text("geoffthecool@gmail.com")
                     Spacer()
                     Image(systemName: "pencil.circle.fill")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                 }
                 .padding(.horizontal)
                 
-                Divider().background(Color.black)
-                
+                Divider().background(.primary)
+
                 HStack {
                     Text("999-999-9999")
                     Spacer()
                     Image(systemName: "pencil.circle.fill")
-                        .foregroundColor(.black)
+                        .foregroundColor(.primary)
                 }
                 .padding(.horizontal)
+
+                Divider().background(.primary)
             }
             
             Spacer()
@@ -101,4 +103,8 @@ struct ProfileView: View {
         .navigationBarTitle("Profile", displayMode: .inline)
     }
 
+}
+
+#Preview {
+    ProfileView()
 }

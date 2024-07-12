@@ -41,7 +41,7 @@ struct CustomTabBar: View {
                             .renderingMode(.template)
                             .resizable()
                             .frame(width: 25, height: 25)
-                            .foregroundStyle(currentTab.rawValue == tab.rawValue ? .customPurple : .black)
+                            .foregroundStyle(currentTab.rawValue == tab.rawValue ? .customPurple : .primary)
 
                     }
                 }
@@ -50,7 +50,7 @@ struct CustomTabBar: View {
             .frame(height: 30)
             .padding(.top, 10)
             .padding(.bottom, 10)
-            .background(.white)
+            .background(.bar)
         }
     }
 }
