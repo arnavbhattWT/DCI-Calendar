@@ -1,0 +1,564 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "\n\n\n\n" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : ""
+          }
+        }
+      }
+    },
+    "%@" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%@\n%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@\n%2$@"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@\n%2$@"
+          }
+        }
+      }
+    },
+    "%@ - %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ - %2$@"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ - %2$@"
+          }
+        }
+      }
+    },
+    "%@ **%@**" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ **%2$@**"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ **%2$@**"
+          }
+        }
+      }
+    },
+    "%@**%@**" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@**%2$@**"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@**%2$@**"
+          }
+        }
+      }
+    },
+    "%@%@" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@%2$@"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@%2$@"
+          }
+        }
+      }
+    },
+    "%lld" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld"
+          }
+        }
+      }
+    },
+    "%lld/10" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld/10"
+          }
+        }
+      }
+    },
+    "Annual tech conference covering the latest trends in technology." : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conferencia anual de tecnología que cubre las últimas tendencias en tecnología."
+          }
+        }
+      }
+    },
+    "Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology." : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conferencia anual de tecnología que cubre las últimas tendencias en tecnología. Conferencia anual de tecnología que cubre las últimas tendencias en tecnología. Conferencia anual de tecnología que cubre las últimas tendencias en tecnología. Conferencia anual de tecnología que cubre las últimas tendencias en tecnología. "
+          }
+        }
+      }
+    },
+    "Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. Annual tech conference covering the latest trends in technology. " : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conferencia anual de tecnología que cubre las últimas tendencias en tecnología. Conferencia anual de tecnología que cubre las últimas tendencias en tecnología. Conferencia anual de tecnología que cubre las últimas tendencias en tecnología. Conferencia anual de tecnología que cubre las últimas tendencias en tecnología. Conferencia anual de tecnología que cubre las últimas tendencias en tecnología. Conferencia anual de tecnología que cubre las últimas tendencias en tecnología. Conferencia anual de tecnología que cubre las últimas tendencias en tecnología. Conferencia anual de tecnología que cubre las últimas tendencias en tecnología. Conferencia anual de tecnología que cubre las últimas tendencias en tecnología. Conferencia anual de tecnología que cubre las últimas tendencias en tecnología. Conferencia anual de tecnología que cubre las últimas tendencias en tecnología. Conferencia anual de tecnología que cubre las últimas tendencias en tecnología."
+          }
+        }
+      }
+    },
+    "calendar-screen.text.friday" : {
+      "comment" : "Friday",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Friday"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viernes"
+          }
+        }
+      }
+    },
+    "calendar-screen.text.monday" : {
+      "comment" : "Monday",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Monday"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lunes"
+          }
+        }
+      }
+    },
+    "calendar-screen.text.saturday" : {
+      "comment" : "Saturday",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Saturday"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sábado"
+          }
+        }
+      }
+    },
+    "calendar-screen.text.sunday" : {
+      "comment" : "Sunday",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Sunday"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Domingo"
+          }
+        }
+      }
+    },
+    "calendar-screen.text.thursday" : {
+      "comment" : "Thursday",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Thursday"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jueves"
+          }
+        }
+      }
+    },
+    "calendar-screen.text.tuesday" : {
+      "comment" : "Tuesday",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Tuesday"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Martes"
+          }
+        }
+      }
+    },
+    "calendar-screen.text.user" : {
+      "comment" : "Calendar Screen title",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%@"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "calendar-screen.text.wednesday" : {
+      "comment" : "Wednesday",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Wednesday"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miércoles"
+          }
+        }
+      }
+    },
+    "calendar-screen.text.your-calendar-user" : {
+      "comment" : "Calendar Screen title",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Your calendar,"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "Tu calendario, "
+          }
+        }
+      }
+    },
+    "event-list.text.no-events" : {
+      "comment" : "Empty view text for no events",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "There are no events to show this day."
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay eventos para mostrar este día."
+          }
+        }
+      }
+    },
+    "Global Health Innovative Practice Workshop" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taller de prácticas innovadoras de salud mundial"
+          }
+        }
+      }
+    },
+    "home-screen.text.events-attended" : {
+      "comment" : "Events attended text for progress",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "events attended"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "eventos asistidos"
+          }
+        }
+      }
+    },
+    "home-screen.text.events-to-unlock" : {
+      "comment" : "Until next event unclocked",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Until Gift Drive Event "
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hasta El Evento De La Campaña De Regalos"
+          }
+        }
+      }
+    },
+    "home-screen.text.unlocked" : {
+      "comment" : "Word unclocked",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Unlocked"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se Desbloquea"
+          }
+        }
+      }
+    },
+    "home-screen.text.welcome" : {
+      "comment" : "Welcome message to user",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Welcome,"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bienvenido,"
+          }
+        }
+      }
+    },
+    "home-screen.text.your-events" : {
+      "comment" : "Title for RSVP events",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Your events"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tus eventos"
+          }
+        }
+      }
+    },
+    "home-screen.toggle.dci" : {
+      "comment" : "Title for DCI Toggle",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "DCI"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DCI"
+          }
+        }
+      }
+    },
+    "home-screen.toggle.partner" : {
+      "comment" : "Title for Partner Toggle",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Partner"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Socio"
+          }
+        }
+      }
+    },
+    "Networking Event" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evento de networking"
+          }
+        }
+      }
+    },
+    "Networking event for professionals in the environmental sciences." : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Evento de networking para profesionales de las ciencias ambientales."
+          }
+        }
+      }
+    },
+    "No" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No"
+          }
+        }
+      }
+    },
+    "RSVP" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "RSVP"
+          }
+        }
+      }
+    },
+    "Tech Conference" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Conferencia de tecnología"
+          }
+        }
+      }
+    },
+    "Workshop on innovative practices in global health." : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taller sobre prácticas innovadoras en salud mundial."
+          }
+        }
+      }
+    },
+    "Wow Amazing Event" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guau, evento increíble"
+          }
+        }
+      }
+    },
+    "Yes" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sí"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		416A3A042C40D5DE001E9038 /* EventDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416A3A032C40D5DE001E9038 /* EventDetailsViewModel.swift */; };
 		41B963732C408E4A003D3EFD /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B963722C408E4A003D3EFD /* DateExtension.swift */; };
 		41B963752C408E7C003D3EFD /* CalendarDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B963742C408E7C003D3EFD /* CalendarDate.swift */; };
-		41B963772C409EFE003D3EFD /* CalendarDayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B963762C409EFE003D3EFD /* CalendarDayView.swift */; };
 		41B963792C40A393003D3EFD /* NoEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B963782C40A393003D3EFD /* NoEventsView.swift */; };
 		41B9637D2C40B5DF003D3EFD /* LocalizedContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B9637C2C40B5DF003D3EFD /* LocalizedContent.swift */; };
+		41B9637F2C40BF2C003D3EFD /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 41B9637E2C40BF2C003D3EFD /* Localizable.xcstrings */; };
 		559073742C4043500033B87D /* DCICalendarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559073732C4043500033B87D /* DCICalendarApp.swift */; };
 		559073762C4043500033B87D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559073752C4043500033B87D /* ContentView.swift */; };
 		559073782C4043510033B87D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 559073772C4043510033B87D /* Assets.xcassets */; };
@@ -29,11 +30,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		416A3A032C40D5DE001E9038 /* EventDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsViewModel.swift; sourceTree = "<group>"; };
 		41B963722C408E4A003D3EFD /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = DCICalendar/DateExtension.swift; sourceTree = SOURCE_ROOT; };
 		41B963742C408E7C003D3EFD /* CalendarDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDate.swift; sourceTree = "<group>"; };
-		41B963762C409EFE003D3EFD /* CalendarDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDayView.swift; sourceTree = "<group>"; };
 		41B963782C40A393003D3EFD /* NoEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoEventsView.swift; sourceTree = "<group>"; };
 		41B9637C2C40B5DF003D3EFD /* LocalizedContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedContent.swift; sourceTree = "<group>"; };
+		41B9637E2C40BF2C003D3EFD /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		559073702C4043500033B87D /* DCICalendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCICalendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		559073732C4043500033B87D /* DCICalendarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCICalendarApp.swift; sourceTree = "<group>"; };
 		559073752C4043500033B87D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				559073772C4043510033B87D /* Assets.xcassets */,
 				559073792C4043510033B87D /* Preview Content */,
 				41B9637C2C40B5DF003D3EFD /* LocalizedContent.swift */,
+				41B9637E2C40BF2C003D3EFD /* Localizable.xcstrings */,
 			);
 			path = DCICalendar;
 			sourceTree = "<group>";
@@ -132,7 +135,6 @@
 				5590738C2C4043E60033B87D /* EventDetailsView.swift */,
 				C5BF5EAF2C406E1500D4C282 /* CustomTabBar.swift */,
 				C5BF5EB12C4077F300D4C282 /* EventListView.swift */,
-				41B963762C409EFE003D3EFD /* CalendarDayView.swift */,
 				41B963782C40A393003D3EFD /* NoEventsView.swift */,
 			);
 			path = Views;
@@ -141,6 +143,7 @@
 		559073852C40439A0033B87D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				416A3A032C40D5DE001E9038 /* EventDetailsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = 559073672C4043500033B87D;
 			productRefGroup = 559073712C4043500033B87D /* Products */;
@@ -220,6 +224,7 @@
 			files = (
 				5590737B2C4043510033B87D /* Preview Assets.xcassets in Resources */,
 				559073782C4043510033B87D /* Assets.xcassets in Resources */,
+				41B9637F2C40BF2C003D3EFD /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				416A3A042C40D5DE001E9038 /* EventDetailsViewModel.swift in Sources */,
 				559073892C4043CB0033B87D /* HomeView.swift in Sources */,
 				559073762C4043500033B87D /* ContentView.swift in Sources */,
 				559073912C4044670033B87D /* EventStorageService.swift in Sources */,
@@ -239,7 +245,6 @@
 				5590738D2C4043E60033B87D /* EventDetailsView.swift in Sources */,
 				41B963752C408E7C003D3EFD /* CalendarDate.swift in Sources */,
 				5590739A2C4068100033B87D /* EventCardView.swift in Sources */,
-				41B963772C409EFE003D3EFD /* CalendarDayView.swift in Sources */,
 				41B963792C40A393003D3EFD /* NoEventsView.swift in Sources */,
 				C5BF5EB22C4077F300D4C282 /* EventListView.swift in Sources */,
 				C5BF5EAE2C406DA600D4C282 /* TabData.swift in Sources */,
@@ -380,6 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DCICalendar/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -408,6 +414,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DCICalendar/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

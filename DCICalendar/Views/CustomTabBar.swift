@@ -19,10 +19,10 @@ struct CustomTabBar: View {
             switch currentTab {
             case .home:
                 HomeView(eventStorage: eventStorage)
+                    .transition(.opacity)
             case .calendar:
                 CalendarView(eventStorage: eventStorage)
-            case .profile:
-                HomeView(eventStorage: eventStorage)
+                    .transition(.opacity)
             }
             Rectangle()
                     .fill(Color.gray)
@@ -30,12 +30,14 @@ struct CustomTabBar: View {
             HStack(spacing: 0){
                 ForEach(Tab.allCases, id: \.rawValue) {tab in
                     Button{
-                        currentTab = tab
+                        withAnimation(.easeIn) {
+                            currentTab = tab
+                        }
                     }label:{
                         Image(tab.rawValue)
                             .renderingMode(.template)
                             .resizable()
-                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 25, height: 25)
                             .foregroundStyle(currentTab.rawValue == tab.rawValue ? .customPurple : .black)
 
                     }

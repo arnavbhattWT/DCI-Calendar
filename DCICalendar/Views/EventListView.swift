@@ -11,6 +11,8 @@ struct EventListView: View {
     @ObservedObject var eventStorage: EventStorageService
     var filteredEvents: [Event]
     var date: Date?
+    @State private var selectedEvent: Event? = nil
+    @State private var showingEventDetails = false
 
     var body: some View {
         
@@ -28,6 +30,11 @@ struct EventListView: View {
                     
                     EventCardView(event: event)
                         .padding(.leading)
+                        .onTapGesture {
+                            selectedEvent = event
+                            self.showingEventDetails = true
+                          }
+
                 }
 
                 if filteredEvents.isEmpty {
@@ -38,6 +45,10 @@ struct EventListView: View {
                     NoEventsView()
                 }
             }
+        }
+        .sheet(isPresented: $showingEventDetails) {
+          EventDetailsView(event: self.$selectedEvent)
+            .environmentObject(self.eventStorage)
         }
     }
     func formattedDividerDate(_ date: Date) -> String {

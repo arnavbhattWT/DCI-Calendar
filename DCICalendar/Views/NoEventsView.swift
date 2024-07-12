@@ -8,8 +8,14 @@
 import SwiftUI
 
 struct NoEventsView: View {
+    private typealias Localization = LocalizedContent.EventList
+
     var body: some View {
-        Text("There are no events this day.")
+        VStack {
+            Text(Localization.noEvent)
+                .font(.caption)
+            Image("DCI Logo")
+        }
     }
 }
 

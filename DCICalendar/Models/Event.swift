@@ -14,8 +14,8 @@ struct Event: Identifiable {
     let address: String
     let flyerLink: String
     var attendance: Bool
-    let title: String
-    let description: String
+    let title: LocalizedStringResource
+    let description: LocalizedStringResource
     let type: EventType
     let attendeeCount: Int?
     let media: String?

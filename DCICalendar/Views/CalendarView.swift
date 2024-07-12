@@ -9,13 +9,16 @@
 import SwiftUI
 
 struct CalendarView: View {
-//    @State var currentTab: Tab = .calendar
+    private typealias Localization = LocalizedContent.Calendar
+
     @ObservedObject var eventStorage: EventStorageService
     
-    var days = ["Mon", "Tues", "Wed", "Thur", "Fri", "Sat", "Sun"]
+    var days = [Localization.Monday, Localization.Tuesday, Localization.Wednesday, Localization.Thursday, Localization.Friday, Localization.Saturday, Localization.Sunday]
     @State private var selectedMonth = 0
     @State var selectedDate = Date()
-    
+    @State private var showingEventDetails = false
+    @State private var selectedEvent: Event? = nil
+
     func selected(date: Date) -> Bool {
         return selectedDate.dateIsEqual(to: date)
     }
@@ -34,7 +37,7 @@ struct CalendarView: View {
                     .ignoresSafeArea()
                 
                 HStack {
-                    Text("Your Calendar, \nGeoff")
+                    Text("\(Localization.yourCalendar)\n\(LocalizedContent.Common.user(user: "Geoff"))")
                         .font(.system(size: 28, weight: .bold))
                         .padding(.top, 35)
                         .padding(.leading, 30)
@@ -67,14 +70,13 @@ struct CalendarView: View {
                 }
                 HStack {
                     ForEach(days, id: \.self) { day in
-                        Text(day)
+                        Text(day.prefix(3))
                             .font(.caption)
                             .frame(maxWidth: .infinity)
                     }
                 }
                 LazyVGrid(columns: Array(repeating: GridItem(.flexible()), count: 7), spacing: 20) {
                     ForEach(fetchDates()) { value in
-                        let days = getDaysWithEvents()
                         VStack {
                             if value.day != -1 {
                                 Button {
@@ -82,7 +84,6 @@ struct CalendarView: View {
                                 } label: {
                                     VStack {
                                         Text("\(value.day)")
-                                        //                  .fontWeight(value.day == Date().currentComponents().day ? .bold : .regular)
                                             .background {
                                                 ZStack (alignment: .bottom) {
                                                     if isCurrent(date: value.date) {
@@ -134,6 +135,10 @@ struct CalendarView: View {
             
             EventListView(eventStorage: eventStorage, filteredEvents: getSelectedDateEvents(date: selectedDate), date: selectedDate)
             Spacer()
+        }
+        .sheet(isPresented: $showingEventDetails) {
+          EventDetailsView(event: self.$selectedEvent)
+            .environmentObject(self.eventStorage)
         }
 //        CustomTabBar(currentTab: $currentTab)
     }

@@ -6,7 +6,8 @@
 //
 import SwiftUI
 struct HomeView: View {
-//    @State var currentTab: Tab = .home
+    private typealias Localization = LocalizedContent.Home
+
     @ObservedObject var eventStorage: EventStorageService
   @State private var isDCISelected: Bool = true
   @State private var selectedEvent: Event? = nil
@@ -34,8 +35,9 @@ struct HomeView: View {
           .frame(width: 400)
           .ignoresSafeArea()
         HStack {
-          Text("Welcome, \nGeoff")
-            .font(.system(size: 28, weight: .bold))
+            Text("\(Localization.welcome)\n\(LocalizedContent.Common.user(user: "Geoff"))")
+            .font(.title)
+            .bold()
             .padding(.top, 35)
             .padding(.leading, 30)
           Spacer()
@@ -46,23 +48,21 @@ struct HomeView: View {
         VStack {
           ZStack {
             CustomProgressRing(progress: Double(numberAttended) / 10,
-                      backgroundRingColor: .purple.opacity(0.4),
-                      primaryRingColor: .purple,
+                      backgroundRingColor: .customPurple.opacity(0.4),
+                      primaryRingColor: .customPurple,
                       ringLineWidth: 10)
             VStack {
               Text("\(numberAttended)/10")
                 .font(.system(size: 50, weight: .heavy))
-                .foregroundColor(.purple)
-              Text("events attended")
-                .foregroundColor(.purple)
+                .foregroundColor(.customPurple)
+            Text(Localization.eventsAttended)
+                .foregroundColor(.customPurple)
             }
           }
           HStack(spacing: 0) {
-            Text("Until Gift Drive Event")
-            Text(" Unlocked")
-              .fontWeight(.bold)
+              Text("\(Localization.untilEventUnlocked) **\(Localization.unlocked)**")
           }
-          .foregroundColor(.purple)
+          .foregroundColor(.customPurple)
           .padding(.top, 5)
         }
         Spacer()
@@ -70,47 +70,45 @@ struct HomeView: View {
       .padding(.top, -40)
       .padding(.bottom, 20)
       HStack {
-        Text("Your Events")
-          .font(.system(size: 20, weight: .semibold))
+          Text(Localization.yourEvents)
+              .font(.title3)
+              .fontWeight(.bold)
           .padding(.leading, 30)
         Spacer()
-        ToggleView(isDCI: $isDCISelected, leftName: "Partner", rightName: "DCI")
+          ToggleView(isDCI: $isDCISelected, leftName: Localization.partner, rightName: Localization.DCI)
           .padding(.trailing, 15)
       }
       .padding(.top, 18)
       .padding(.bottom, 10)
-      ScrollView {
-        VStack(spacing: 0) {
-          ForEach(filteredEvents.indices, id: \.self) { index in
-            let event = filteredEvents[index]
-            if index == 0 || !Calendar.current.isDate(event.startDate, inSameDayAs: filteredEvents[index - 1].startDate) {
-              let dateString = formattedDividerDate(event.startDate)
-              HStack {
-                Text(dateString)
-                  .font(.system(size: 15))
-                  .foregroundColor(Color.gray.opacity(0.5))
-                Rectangle()
-                  .fill(Color.gray.opacity(0.5))
-                  .frame(height: 1)
-                  .edgesIgnoringSafeArea(.horizontal)
-              }
-              .padding(.vertical, 8)
-              .padding(.leading, 20)
-              .padding(.trailing, 10)
-            }
-            EventCardView(event: event)
-              .padding(.leading)
-              .onTapGesture {
-                selectedEvent = event
-                self.showingEventDetails = true
-              }
-          }
-        }
-      }
-      .sheet(isPresented: $showingEventDetails) {
-        EventDetailsView(event: self.$selectedEvent)
-          .environmentObject(self.eventStorage)
-      }
+//      ScrollView {
+//        VStack(spacing: 0) {
+//          ForEach(filteredEvents.indices, id: \.self) { index in
+//            let event = filteredEvents[index]
+//            if index == 0 || !Calendar.current.isDate(event.startDate, inSameDayAs: filteredEvents[index - 1].startDate) {
+//              let dateString = formattedDividerDate(event.startDate)
+//              HStack {
+//                Text(dateString)
+//                  .font(.system(size: 15))
+//                  .foregroundColor(Color.gray.opacity(0.5))
+//                Rectangle()
+//                  .fill(Color.gray.opacity(0.5))
+//                  .frame(height: 1)
+//                  .edgesIgnoringSafeArea(.horizontal)
+//              }
+//              .padding(.vertical, 8)
+//              .padding(.leading, 20)
+//              .padding(.trailing, 10)
+//            }
+//            EventCardView(event: event)
+//              .padding(.leading)
+//              .onTapGesture {
+//                selectedEvent = event
+//                self.showingEventDetails = true
+//              }
+//          }
+//        }
+//      }
+        EventListView(eventStorage: eventStorage, filteredEvents: filteredEvents)
       Spacer()
     }
 //      CustomTabBar(currentTab: $currentTab)
