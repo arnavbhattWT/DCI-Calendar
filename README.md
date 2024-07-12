@@ -11,6 +11,8 @@ DCICalendar is an efficient and user-friendly iOS application designed to help D
 
 # Screenshots
 For a visual walkthrough of the application, please visit our presentation here: https://www.figma.com/slides/qZCtgvm1xr8xifX1SiJi8w/DCI-Presentation?node-id=1-26&t=hXgBrutOD5frKw3b-1 
+<img width="679" alt="Screenshot 2024-07-12 at 9 30 33 AM" src="https://github.com/user-attachments/assets/4cca883d-114a-40b6-9b11-6d2847e1e0e7">
+<img width="182" alt="Screenshot 2024-07-12 at 9 30 59 AM" src="https://github.com/user-attachments/assets/52f88dbf-9d26-461b-86d8-96c91a353faa">
 
 # Getting Started
 Prerequisites
