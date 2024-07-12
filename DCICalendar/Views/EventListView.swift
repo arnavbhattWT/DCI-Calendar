@@ -46,8 +46,8 @@ struct EventListView: View {
                 }
             }
         }
-        .sheet(isPresented: $showingEventDetails) {
-          EventDetailsView(event: self.$selectedEvent)
+        .sheet(item: $selectedEvent) { event in
+          EventDetailsView(event: event)
             .environmentObject(self.eventStorage)
         }
     }

@@ -8,19 +8,20 @@ import SwiftUI
 import MapKit
 
 struct EventDetailsView: View {
-    @Binding var event: Event?
+    var event: Event
     @State private var isAttending: Bool
     @EnvironmentObject var eventStorage: EventStorageService
     @ObservedObject var viewModel: EventDetailsViewModel
     @Environment(\.colorScheme) var colorScheme
-    init(event: Binding<Event?>) {
-        self._event = event
-        self._isAttending = State(initialValue: event.wrappedValue?.attendance ?? false)
-        if let eventAddress = event.wrappedValue?.address {
-            self.viewModel = EventDetailsViewModel(address: eventAddress)
-          } else {
-            self.viewModel = EventDetailsViewModel(address: "Default Address")
-          }
+    init(event: Event) {
+        self.event = event
+        self._isAttending = State(initialValue: event.attendance)
+//        if let eventAddress = event.wrappedValue?.address {
+//            self.viewModel = EventDetailsViewModel(address: eventAddress)
+//          } else {
+//            self.viewModel = EventDetailsViewModel(address: "Default Address")
+//          }
+        self.viewModel = EventDetailsViewModel(address: event.address)
     }
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -40,12 +41,12 @@ struct EventDetailsView: View {
                             .padding(.horizontal, 10)
                             .shadow(radius: 5)
                     }
-                    Text(event!.title)
+                    Text(event.title)
                         .font(.title)
                         .fontWeight(.bold)
                         .padding(.leading, 16)
                         .padding(.top, 20)
-                    Text("\(formattedDateTime(event!.startDate)) - \(formattedEndTime(event!.endDate))")
+                    Text("\(formattedDateTime(event.startDate)) - \(formattedEndTime(event.endDate))")
                         .font(.subheadline)
                         .foregroundColor(.gray)
                         .padding(.top, 5)
@@ -56,18 +57,18 @@ struct EventDetailsView: View {
                         .edgesIgnoringSafeArea(.horizontal)
                         .padding(.horizontal, 16)
                         .padding(.top, 10)
-                    Link(destination: URL(string: "http://maps.apple.com/?address=\(event!.address.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")")!) {
-                        Text("\(event!.address)")
+                    Link(destination: URL(string: "http://maps.apple.com/?address=\(event.address.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? "")")!) {
+                        Text("\(event.address)")
                             .font(.callout.smallCaps())
                             .padding(.top, 10)
                             .padding(.horizontal, 16)
                     }
-                    Text("\(event!.description)")
+                    Text("\(event.description)")
                         .font(.body)
                         .padding(.top, 10)
                         .padding(.horizontal, 16)
                     // Media text (if available)
-                    if let media = event!.media {
+                    if let media = event.media {
                         Text("\(media)")
                             .font(.callout)
                             .padding(.top, 10)
@@ -157,7 +158,7 @@ struct EventDetailsView: View {
         return formatter.string(from: date)
     }
     private func updateAttendance() {
-        var updatedEvent = event!
+        var updatedEvent = event
         updatedEvent.attendance = isAttending
         eventStorage.updateEvent(updatedEvent)
     }
@@ -175,6 +176,6 @@ struct EventDetailsView_Previews: PreviewProvider {
                           type: .DCI,
                           attendeeCount: 10,
                           media: "geoffwebsite.com/volunteer @ggrammer")
-        EventDetailsView(event: .constant(event))
+        EventDetailsView(event: event)
     }
 }
