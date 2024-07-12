@@ -136,8 +136,8 @@ struct CalendarView: View {
             EventListView(eventStorage: eventStorage, filteredEvents: getSelectedDateEvents(date: selectedDate), date: selectedDate)
             Spacer()
         }
-        .sheet(isPresented: $showingEventDetails) {
-          EventDetailsView(event: self.$selectedEvent)
+        .sheet(item: $selectedEvent) { event in
+          EventDetailsView(event: event)
             .environmentObject(self.eventStorage)
         }
 //        CustomTabBar(currentTab: $currentTab)
