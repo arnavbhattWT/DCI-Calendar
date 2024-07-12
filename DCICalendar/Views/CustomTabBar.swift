@@ -23,6 +23,9 @@ struct CustomTabBar: View {
             case .calendar:
                 CalendarView(eventStorage: eventStorage)
                     .transition(.opacity)
+            case .profile:
+                ProfileView()
+                    .transition(.opacity)
             }
             Rectangle()
                     .fill(Color.gray)

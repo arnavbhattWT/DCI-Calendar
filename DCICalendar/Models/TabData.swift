@@ -10,5 +10,5 @@ import Foundation
 enum Tab: String, CaseIterable {
     case home = "Home"
     case calendar = "Calendar"
-//    case profile = "Profile"
+    case profile = "Profile"
 }

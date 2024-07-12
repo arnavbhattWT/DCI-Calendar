@@ -27,6 +27,7 @@
 		C5BF5EAE2C406DA600D4C282 /* TabData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF5EAD2C406DA600D4C282 /* TabData.swift */; };
 		C5BF5EB02C406E1500D4C282 /* CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF5EAF2C406E1500D4C282 /* CustomTabBar.swift */; };
 		C5BF5EB22C4077F300D4C282 /* EventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5BF5EB12C4077F300D4C282 /* EventListView.swift */; };
+		F56CF38C2C40EA76008BDD36 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56CF38B2C40EA76008BDD36 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		C5BF5EAD2C406DA600D4C282 /* TabData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabData.swift; sourceTree = "<group>"; };
 		C5BF5EAF2C406E1500D4C282 /* CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBar.swift; sourceTree = "<group>"; };
 		C5BF5EB12C4077F300D4C282 /* EventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListView.swift; sourceTree = "<group>"; };
+		F56CF38B2C40EA76008BDD36 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				C5BF5EAF2C406E1500D4C282 /* CustomTabBar.swift */,
 				C5BF5EB12C4077F300D4C282 /* EventListView.swift */,
 				41B963782C40A393003D3EFD /* NoEventsView.swift */,
+				F56CF38B2C40EA76008BDD36 /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				5590738D2C4043E60033B87D /* EventDetailsView.swift in Sources */,
 				41B963752C408E7C003D3EFD /* CalendarDate.swift in Sources */,
 				5590739A2C4068100033B87D /* EventCardView.swift in Sources */,
+				F56CF38C2C40EA76008BDD36 /* ProfileView.swift in Sources */,
 				41B963792C40A393003D3EFD /* NoEventsView.swift in Sources */,
 				C5BF5EB22C4077F300D4C282 /* EventListView.swift in Sources */,
 				C5BF5EAE2C406DA600D4C282 /* TabData.swift in Sources */,
