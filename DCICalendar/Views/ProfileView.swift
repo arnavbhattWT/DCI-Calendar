@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ProfileView: View {
     private typealias Localization = LocalizedContent.Home
-    
+
+
     var body: some View {
         VStack(alignment: .leading) {
             ZStack(alignment: .topLeading) {
@@ -81,7 +82,7 @@ struct ProfileView: View {
             
             Spacer()
             
-            Text("DCI Coach: Vikki Leathers")
+            Text("DCI \(LocalizedContent.Profile.coach): Vikki Leathers")
                             .font(.headline)
                             .fontWeight(.bold)
                             .multilineTextAlignment(.center)
@@ -89,7 +90,7 @@ struct ProfileView: View {
                             .foregroundColor(.customPurple)
                             .padding(-40)
             
-            Text("Have Questions? Contact Us.")
+            Text(LocalizedContent.Profile.haveQs)
             Text("919-333-9999 | DCIHelp@dci.com")
                             .foregroundColor(.gray)
                             .multilineTextAlignment(.center)

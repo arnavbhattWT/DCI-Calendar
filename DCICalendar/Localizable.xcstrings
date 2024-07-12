@@ -134,13 +134,34 @@
       }
     },
     "••••••••" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "••••••••"
+          }
+        }
+      }
     },
     "919-333-9999 | DCIHelp@dci.com" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "919-333-9999 | DCIHelp@dci.com"
+          }
+        }
+      }
     },
     "999-999-9999" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "999-999-9999"
+          }
+        }
+      }
     },
     "Annual tech conference covering the latest trends in technology." : {
       "localizations" : {
@@ -334,8 +355,15 @@
         }
       }
     },
-    "DCI Coach: Vikki Leathers" : {
-
+    "DCI %@: Vikki Leathers" : {
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DCI %@: Vikki Leathers"
+          }
+        }
+      }
     },
     "event-list.text.no-events" : {
       "comment" : "Empty view text for no events",
@@ -356,13 +384,34 @@
       }
     },
     "Geoff Grammer" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geoff Grammer"
+          }
+        }
+      }
     },
     "geoffthecool@gmail.com" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "geoffthecool@gmail.com"
+          }
+        }
+      }
     },
     "ggrammer" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ggrammer"
+          }
+        }
+      }
     },
     "Global Health Innovative Practice Workshop" : {
       "localizations" : {
@@ -373,9 +422,6 @@
           }
         }
       }
-    },
-    "Have Questions? Contact Us." : {
-
     },
     "home-screen.text.events-attended" : {
       "comment" : "Events attended text for progress",
@@ -534,7 +580,50 @@
       }
     },
     "Profile" : {
-
+      "localizations" : {
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perfil"
+          }
+        }
+      }
+    },
+    "profile.text.coach" : {
+      "comment" : "Coach text",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Coach"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entrenador"
+          }
+        }
+      }
+    },
+    "profile.text.have-questions" : {
+      "comment" : "Have Questions? Contact Us",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Have Questions? Contact Us"
+          }
+        },
+        "es-419" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Tienes preguntas? Contáctenos"
+          }
+        }
+      }
     },
     "RSVP" : {
       "localizations" : {
